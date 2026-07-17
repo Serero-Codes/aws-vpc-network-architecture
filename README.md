@@ -60,18 +60,18 @@ The project simulates a startup environment where backend resources must remain 
 ---
 
 ## Public Subnet
-<img width="1920" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/acc2e856-b508-45f0-ad13-9ef80e1551ed" />
+<img width="1920" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/cd8ae5c5-4dbb-4582-9d8e-af1d06c76e92" />
 
 | Property | Value |
 |----------|-------|
-| CIDR | 10.0.25.0/24 |
+| CIDR | 10.0.0.0/24 |
 | Route Table | Public Route Table |
 | Internet Access | Yes |
 
 ---
 
 ## Private Subnet
-<img width="1920" height="1080" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/1f5bea64-4483-4ab9-bd0b-b421939781fe" />
+<img width="1920" height="1080" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/3d86f563-2e3a-4892-9365-b5c4d7ac2b2f" />
 
 | Property | Value |
 |----------|-------|
