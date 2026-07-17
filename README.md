@@ -18,7 +18,6 @@ The project simulates a startup environment where backend resources must remain 
 - Implement subnet-level security using Network ACLs (NACLs)
 - Deploy EC2 instances in both public and private subnets
 - Verify secure internet connectivity from a private subnet
-- Document the complete networking architecture
 
 ---
 
@@ -26,32 +25,6 @@ The project simulates a startup environment where backend resources must remain 
 
 <img width="971" height="541" alt="Final-AD drawio" src="https://github.com/user-attachments/assets/721b7e8f-e3f4-4fd5-aa2f-16477eecdd2b" />
 
-
-Example:
-
-```
-                    Internet
-                        │
-                Internet Gateway
-                        │
-               Public Route Table
-                        │
-         Public Subnet (10.0.25.0/24)
-                        │
-      ┌──────────────────────────────┐
-      │ Bastion Host EC2             │
-      │ NAT Gateway                  │
-      └──────────────────────────────┘
-                        │
-               Private Route Table
-                        │
-        Private Subnet (10.0.50.0/24)
-                        │
-      ┌──────────────────────────────┐
-      │ Private EC2                  │
-      │ No Public IP                 │
-      └──────────────────────────────┘
-```
 
 ---
 
@@ -76,6 +49,7 @@ Example:
 # Network Configuration
 
 ## VPC
+<img width="1920" height="1080" alt="Screenshot (65)" src="https://github.com/user-attachments/assets/b4882f70-b82c-447d-9220-46dc4f76fac8" />
 
 | Property | Value |
 |----------|-------|
@@ -86,6 +60,7 @@ Example:
 ---
 
 ## Public Subnet
+<img width="1920" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/acc2e856-b508-45f0-ad13-9ef80e1551ed" />
 
 | Property | Value |
 |----------|-------|
@@ -96,6 +71,7 @@ Example:
 ---
 
 ## Private Subnet
+<img width="1920" height="1080" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/1f5bea64-4483-4ab9-bd0b-b421939781fe" />
 
 | Property | Value |
 |----------|-------|
@@ -108,6 +84,7 @@ Example:
 # Routing Configuration
 
 ## Public Route Table
+<img width="1920" height="1080" alt="Screenshot (78)" src="https://github.com/user-attachments/assets/10fafb81-0489-415b-9851-f55b66fe6919" />
 
 | Destination | Target |
 |-------------|--------|
@@ -117,6 +94,7 @@ Example:
 ---
 
 ## Private Route Table
+<img width="1920" height="1080" alt="Screenshot (77)" src="https://github.com/user-attachments/assets/f8e53deb-fe30-44c9-a014-af7e8a0ba223" />
 
 | Destination | Target |
 |-------------|--------|
@@ -156,6 +134,7 @@ Outbound
 ## Network ACL
 
 Inbound Rules
+<img width="1920" height="1080" alt="Screenshot (87)" src="https://github.com/user-attachments/assets/b4ecbb9a-fb9c-41ef-9db1-dc9be4126f5a" />
 
 | Rule | Port | Action |
 |------|------|--------|
@@ -166,6 +145,7 @@ Inbound Rules
 | All Other Traffic | - | Deny |
 
 Outbound Rules
+<img width="1920" height="1080" alt="Screenshot (88)" src="https://github.com/user-attachments/assets/b732ea4e-5037-42d5-ab61-e35de8f40f87" />
 
 | Rule | Port | Action |
 |------|------|--------|
@@ -186,6 +166,7 @@ Verified:
 - Reachable from the internet using SSH.
 - Assigned a public IPv4 address.
 - Located inside the Public Subnet.
+<img width="1920" height="1080" alt="Screenshot (73)" src="https://github.com/user-attachments/assets/b2593c18-0a72-4b5b-b041-e2f0bb28dc2e" />
 
 ---
 
@@ -196,6 +177,7 @@ Verified:
 - No public IPv4 address assigned.
 - Located inside the Private Subnet.
 - Accessible only through the Bastion Host.
+<img width="1920" height="1080" alt="Screenshot (73)" src="https://github.com/user-attachments/assets/307d06e6-8413-4f7b-b8c8-09cd307472fb" />
 
 ---
 
