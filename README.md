@@ -24,7 +24,8 @@ The project simulates a startup environment where backend resources must remain 
 
 ## Architecture
 
-> Insert your architecture diagram here.
+<img width="971" height="541" alt="Final-AD drawio" src="https://github.com/user-attachments/assets/721b7e8f-e3f4-4fd5-aa2f-16477eecdd2b" />
+
 
 Example:
 
